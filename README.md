@@ -5,9 +5,16 @@ Java project made for my programming subject which consists of  working and impl
 
 The primary objective of this project is to develop skills in creating threads in order to perform it on future projects. 
 
+The main class creates all of the semaphores to be later applied in the thread objects. Then, the threads will start through the .start() method.
+
+As for the thread class it extends a java class called Thread and it includes about 13 semaphores from the Semaphore class (which it is imported previously because it is also a java resource).
+
+The threads that are independent (H1,H3,H5,H6,H7,H9,H11) only has a system out and the initialization of its semaphore.
+As for the rest of the threads (which are dependent) it has a try-catch block (sometimes 1, sometimes more than 1) and inside them it has a semaphore method that waits for the semaphore that is called (the one that this thread is depending on) and when it reaches him, it release the semaphore that the thread has. 
+
 This is the activity diagram:
 
-![Image text]()
+![Image text](https://github.com/JohanSantanaGalvanJob/Working-with-threads/blob/master/README_IMAGES/CherneAlHorno.png)
 
 ## Some examples of the execution
 
