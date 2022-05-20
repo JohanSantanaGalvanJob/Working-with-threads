@@ -32,7 +32,7 @@ se5,Semaphore se6,Semaphore se7) {
         
         if (this.getName().equals("H3")) {
             System.out.println("H3 Calentar aceite a medio fuego");
-            sem2.release(); //desbloqueo semáforo 3.
+            sem2.release(); //desbloqueo semáforo 2.
         } 
         
         if (this.getName().equals("H4")) {
@@ -40,70 +40,70 @@ se5,Semaphore se6,Semaphore se7) {
                 sem2.acquire(); //espero por el semáforo 2 
             } catch (InterruptedException e){}
             System.out.println("H4 Pochar las papas");
-            sem3.release(); //desbloqueo semáforo 4.
+            sem3.release(); //desbloqueo semáforo 3.
         } 
         
         if (this.getName().equals("H5")) {
             System.out.println("H5 Trocear tomate por la mitad");
-            sem3.release(); //desbloqueo semáforo 5.
+            sem3.release(); //desbloqueo semáforo 3.
         } 
         
         if (this.getName().equals("H6")) {
             System.out.println("H6 Trocear pimiento");
-            sem3.release(); //desbloqueo semáforo 6.
+            sem3.release(); //desbloqueo semáforo 3.
         } 
         
         if (this.getName().equals("H7")) {
             System.out.println("H7 Poner sal ajo y perejil al cherne antes de colocarlo en la fuente de horno");
-            sem3.release(); //desbloqueo semáforo 7.
+            sem3.release(); //desbloqueo semáforo 3.
         } 
         
         if (this.getName().equals("H8")) {
             try{
-                sem3.acquire(); //espero por el semáforo 4 
+                sem3.acquire(); //espero por el semáforo 3. 
             } catch (InterruptedException e){}
            
             System.out.println("H8 Colocar en una fuente de horno las papas pochadas con el tomate, el pimiento y el Cherne");
-            sem4.release(); //desbloqueo semáforo 8.
+            sem4.release(); //desbloqueo semáforo 4.
         } 
         
         if (this.getName().equals("H9")) {
             System.out.println("H9 Precalentar horno a 270 grados centígrados");
-            sem4.release(); //desbloqueo semáforo 9.
+            sem4.release(); //desbloqueo semáforo 4.
         } 
         
         if (this.getName().equals("H10")) {
             try{
-                sem4.acquire(); //espero por el semáforo 8 
+                sem4.acquire(); //espero por el semáforo 4. 
             } catch (InterruptedException e){}
             System.out.println("H10 Meter fuente con todo en el horno precalentado a 270º solo 5 minutos para que se marque");
-            sem5.release(); //desbloqueo semáforo 10.
+            sem5.release(); //desbloqueo semáforo 5.
         } 
         
         if (this.getName().equals("H11")) {
             System.out.println("H11 Calentar vaso de vino blanco hasta llevarlo a ebullición");
-            sem5.release(); //desbloqueo semáforo 11.
+            sem5.release(); //desbloqueo semáforo 5.
         } 
         
         if (this.getName().equals("H12")) {
             try{
-                sem5.acquire(); //espero por el semáforo 10 
+                sem5.acquire(); //espero por el semáforo 5.
             } catch (InterruptedException e){}
             System.out.println("H12 Tras marcar el pescado, rocía el vaso de vino blanco por todo el pescado");
-            sem6.release(); //desbloqueo semáforo 12.
+            sem6.release(); //desbloqueo semáforo 6.
         } 
         
         if (this.getName().equals("H13")) {
             try{
-                sem6.acquire(); //espero por el semáforo 12 
+                sem6.acquire(); //espero por el semáforo 6. 
             } catch (InterruptedException e){}
             System.out.println("H13 Poner el horno a 160 grados y cocinar durante 20 minutos más");
-            sem7.release(); //desbloqueo semáforo 13.
+            sem7.release(); //desbloqueo semáforo 7.
         } 
         
         if (this.getName().equals("H14")) {
             try{
-                sem7.acquire(); //espero por el semáforo 13 
+                sem7.acquire(); //espero por el semáforo 7 
             } catch (InterruptedException e){}
             System.out.println("H14 Servir caliente");
         } 
